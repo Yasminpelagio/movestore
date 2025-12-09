@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>MoveStore</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f2f2;
+        }
+
+        /* NAV */
+        nav {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover { opacity: 0.7; }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 30px;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            background: url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80') 
+                        center/cover no-repeat;
+            padding: 140px 20px;
+            text-align: left;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .banner p {
+            font-size: 22px;
+            margin: 10px 0 20px;
+        }
+
+        .cta-btn {
+            background: #ff8b00;
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cta-btn:hover { background: #e07a00; }
+
+        /* TÍTULOS */
+        h2.section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 32px;
+        }
+
+        /* LISTA DE PRODUTOS */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00a18b;
+            margin: 10px 0;
+        }
+
+        .btn {
+            background: #00a18b;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #007f6c;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/produtos/">Produtos</a>
+    <a href="/sobre/">Sobre</a>
+    <a href="/contato/">Contato</a>
+    <a href="/carrinho/">Carrinho</a>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
