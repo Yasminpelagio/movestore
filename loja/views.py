@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 import random
 
-# Produtos
+
 produtos_lista = [
     {'id': 1, 'nome': 'Sofá Moderno Cinza', 'preco': 1250, 'imagem': 'https://images.unsplash.com/photo-1759722668385-90006d9c7aa7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c29mYSUyMG1vZGVybm8lMjBjaW56YXxlbnwwfHwwfHx8MA%3D%3D'},
     {'id': 2, 'nome': 'Poltrona Elegante Bege', 'preco': 700, 'imagem': 'https://images.unsplash.com/photo-1619992677751-cb736bd47e2e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHBvbHRyb25hfGVufDB8fDB8fHww'},
@@ -15,10 +15,10 @@ produtos_lista = [
     {'id': 10, 'nome': 'Mesa lateral', 'preco': 240, 'imagem': 'https://plus.unsplash.com/premium_photo-1674773521319-a67d6e0f2de5?q=80&w=679&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'},
 ]
 
-# Carrinho global
+
 carrinho_produtos = []
 
-# Views
+
 def home(request):
     produtos_destaque = random.sample(produtos_lista, 4)
     return render(request, 'home.html', {'produtos_destaque': produtos_destaque})
